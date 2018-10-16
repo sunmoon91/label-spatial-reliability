@@ -1,5 +1,5 @@
 function [sr] = spatial_reliability(hard_label_idx, ma, ss)
-%calculate the label reliabiltiy
+%calculate the spatial reliabiltiy
 [idx, idy, idz] = ind2sub(size(img), find(ma == 1));
 ind = [idx, idy, idz];
 [~, ~, ol] = compute_pat(ind,double(hard_label_idx),double(hard_label_idx), ss);
